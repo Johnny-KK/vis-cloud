@@ -1,9 +1,9 @@
 package com.johnny.vis.cloud.article.controller;
 
+import com.johnny.vis.cloud.article.base.ResponseData;
+import com.johnny.vis.cloud.article.constant.Response;
 import com.johnny.vis.cloud.article.entity.TagEntity;
 import com.johnny.vis.cloud.article.service.TagService;
-import com.johnny.vis.cloud.common.constant.Response;
-import com.johnny.vis.cloud.common.entity.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +25,17 @@ public class TagController {
 
     @ApiOperation(value = "条件查询标签列表")
     @GetMapping("queryTagList")
-    public ResponseData<List<TagEntity>> queryTagList() {
-        return ResponseData.success(tagService.queryTagList());
+    public ResponseData queryTagList(TagEntity entity) {
+        return ResponseData.success(tagService.queryTagList(entity));
     }
 
     @ApiOperation(value = "新增标签")
     @PostMapping(value = "addTag")
-    public ResponseData<TagEntity> addTag(@RequestBody TagEntity tagEntity) {
-        tagService.save(tagEntity);
-        return  ResponseData.success(Response.SUCCESS_SAVE, tagEntity);
+    public ResponseData addTag(@RequestBody TagEntity tagEntity) {
+        List<TagEntity> list = tagService.queryTagList(tagEntity);
+        if (!list.isEmpty()) {
+            return ResponseData.error("标签名不能重复");
+        }
+        return  ResponseData.success(Response.SUCCESS_SAVE, tagService.save(tagEntity));
     }
 }

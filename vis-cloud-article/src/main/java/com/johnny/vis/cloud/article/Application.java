@@ -6,11 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Johnny
+ * @date 2020-12-21
  */
 @SpringBootApplication
 @MapperScan("com.johnny.vis.cloud.article.dao")
-public class VisCloudArticleApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(VisCloudArticleApplication.class, args);
-	}
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
 }

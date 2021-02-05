@@ -6,16 +6,17 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
+
 /**
  * @author Johnny
- * @date 2020-12-21
+ * @date 2021-01-19
  */
 @Getter
 @Setter
-@TableName("article")
-public class ArticleEntity extends BaseEntity {
+@TableName("articleTag")
+public class ArticleTagEntity extends BaseEntity {
 
-    private static final long serialVersionUID = 1004504913476913232L;
+    private static final long serialVersionUID = 5565169844749699699L;
 
     /**
      * 主键
@@ -25,20 +26,20 @@ public class ArticleEntity extends BaseEntity {
     private Long id;
 
     /**
-     * 标题
+     * 文章ID
      */
-    @TableField("title")
-    private String title;
+    @TableField("articleId")
+    private Long articleId;
 
     /**
-     * 作者
+     * 标签ID
      */
-    @TableField("author")
-    private String author;
+    @TableField("tagId")
+    private Long tagId;
 
     /**
-     * 内容
+     * 标签名称
      */
-    @TableField("content")
-    private String content;
+    @TableField("tagName")
+    private String tagName;
 }
