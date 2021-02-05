@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <log4j.versoin>1.2.17</log4j.versoin>
     </properties>
 
     <!-- 管理依赖 -->
@@ -25,7 +26,33 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- dev -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
 
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- config -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -34,15 +61,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
             </plugin>
         </plugins>
     </build>
 
     <modules>
-        <!--        <module>vis-cloud-common</module>-->
+        <module>vis-cloud-common</module>
         <module>vis-cloud-article</module>
     </modules>
 </project>
