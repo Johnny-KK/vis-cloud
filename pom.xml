@@ -62,5 +62,6 @@
     <modules>
         <module>vis-cloud-common</module>
         <module>vis-cloud-article</module>
+        <module>vis-cloud-admin</module>
     </modules>
 </project>
