@@ -1,4 +1,4 @@
-package com.johnny.vis.cloud.article.config;
+package com.johnny.vis.cloud.common.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;

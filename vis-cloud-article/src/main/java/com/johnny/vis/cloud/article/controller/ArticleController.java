@@ -1,7 +1,6 @@
 package com.johnny.vis.cloud.article.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.johnny.vis.cloud.article.base.ResponseData;
 import com.johnny.vis.cloud.article.entity.ArticleEntity;
 import com.johnny.vis.cloud.article.entity.ArticleTagEntity;
 import com.johnny.vis.cloud.article.qo.ArticleQo;
@@ -9,6 +8,7 @@ import com.johnny.vis.cloud.article.service.ArticleService;
 import com.johnny.vis.cloud.article.service.ArticleTagService;
 import com.johnny.vis.cloud.article.trans.ArticleTrans;
 import com.johnny.vis.cloud.article.vo.ArticleVo;
+import com.johnny.vis.cloud.common.entity.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

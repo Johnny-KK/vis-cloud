@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Johnny
  * @date 2020-12-21
  */
-@SpringBootApplication
 @MapperScan("com.johnny.vis.cloud.article.dao")
+@SpringBootApplication(scanBasePackages={"com.johnny.vis.cloud","com.johnny.vis.cloud.common"})
 public class Application {
 
     public static void main(String[] args) {

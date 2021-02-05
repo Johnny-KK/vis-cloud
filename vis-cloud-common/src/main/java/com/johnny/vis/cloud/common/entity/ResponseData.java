@@ -60,7 +60,7 @@ public class ResponseData<T> implements Serializable {
      * @return ResponseData
      */
     public static<T> ResponseData<T> success(T data) {
-        return new ResponseData<>(Response.OPERATE_SUCCESS, Response.SUCCESS_DEFAULT, data);
+        return new ResponseData<T>(Response.OPERATE_SUCCESS, Response.SUCCESS_DEFAULT, data);
     }
 
     /**
@@ -81,7 +81,7 @@ public class ResponseData<T> implements Serializable {
      * @return ResponseData
      */
     public static<T> ResponseData<T> success(String message, T data) {
-        return new ResponseData<>(Response.OPERATE_SUCCESS, message, data);
+        return new ResponseData<T>(Response.OPERATE_SUCCESS, message, data);
     }
 
     /**

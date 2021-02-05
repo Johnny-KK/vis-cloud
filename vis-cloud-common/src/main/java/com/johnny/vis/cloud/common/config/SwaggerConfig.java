@@ -1,4 +1,4 @@
-package com.johnny.vis.cloud.article.config;
+package com.johnny.vis.cloud.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-//@ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
 public class SwaggerConfig {
 
     @Bean
@@ -27,6 +26,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
+                // TODO 配置为通用路径
                 .apis(RequestHandlerSelectors.basePackage("com.johnny.vis.cloud.article.controller"))
                 .paths(PathSelectors.any())
                 .build();

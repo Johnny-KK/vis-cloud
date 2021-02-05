@@ -1,4 +1,4 @@
-package com.johnny.vis.cloud.article.handler;
+package com.johnny.vis.cloud.common.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;

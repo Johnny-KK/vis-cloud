@@ -1,12 +1,11 @@
 package com.johnny.vis.cloud.article.controller;
 
-import com.johnny.vis.cloud.article.base.ResponseData;
-import com.johnny.vis.cloud.article.constant.Response;
 import com.johnny.vis.cloud.article.entity.TagEntity;
 import com.johnny.vis.cloud.article.service.TagService;
+import com.johnny.vis.cloud.common.constant.Response;
+import com.johnny.vis.cloud.common.entity.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,8 +19,11 @@ import java.util.List;
 @Api("标签")
 public class TagController {
 
-    @Autowired
-    private TagService tagService;
+    private final TagService tagService;
+
+    public TagController(TagService tagService) {
+        this.tagService = tagService;
+    }
 
     @ApiOperation(value = "条件查询标签列表")
     @GetMapping("queryTagList")
