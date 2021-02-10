@@ -19,16 +19,19 @@ public class ServerWithServeVo implements Serializable {
 
     private static final long serialVersionUID = -2413835919769989406L;
 
-    public ServerWithServeVo() {}
+    public ServerWithServeVo() {
+    }
 
     public ServerWithServeVo(Map<String, Object> map) {
         BeanUtil.copyProperties(map, this);
-        ServeVo vo = new ServeVo();
-        BeanUtil.copyProperties(map, vo);
         if (this.serveList == null) {
             this.serveList = new ArrayList<>();
         }
-        this.serveList.add(vo);
+        if (map.get("serveId") != null) {
+            ServeVo vo = new ServeVo();
+            BeanUtil.copyProperties(map, vo);
+            this.serveList.add(vo);
+        }
     }
 
     /**
