@@ -8,6 +8,7 @@
                t.os     serverOs,
                t.ip     serverIp,
                t.domain serverDomain,
+               t.isVirtual,
                r.id     serveId,
                r.name   serveName,
                r.port   servePort

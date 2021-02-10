@@ -60,6 +60,11 @@ public class ServerWithServeVo implements Serializable {
     private String serverDomain;
 
     /**
+     * 是否是虚拟机 Y/N
+     */
+    private String isVirtual;
+
+    /**
      * 下属服务列表
      */
     private List<ServeVo> serveList;

@@ -50,6 +50,12 @@ public class ServerEntity extends BaseEntity {
     private String domain;
 
     /**
+     * 是否是虚拟机 Y/N
+     */
+    @TableField("isVirtual")
+    private String isVirtual;
+
+    /**
      * 备注
      */
     @TableField("rmk")

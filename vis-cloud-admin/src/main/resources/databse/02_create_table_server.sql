@@ -5,6 +5,7 @@ CREATE TABLE `visAdmin`.`server`
     `os`         varchar(32)  NULL COMMENT '操作系统',
     `ip`         varchar(15)  NULL COMMENT '服务器IP',
     `domain`     varchar(128) NULL COMMENT '域名',
+    `isVirtual`  varchar(1)   NULL COMMENT '是否是虚拟机 Y/N',
     `rmk`        varchar(512) NULL COMMENT '备注',
     `deleted`    varchar(1)   NULL COMMENT '是否删除: Y/N',
     `createBy`   varchar(32)  NULL COMMENT '创建人',
