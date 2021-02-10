@@ -2,6 +2,7 @@ CREATE TABLE `visAdmin`.`server`
 (
     `id`         bigint(0)    NOT NULL COMMENT 'ID',
     `name`       varchar(64)  NULL COMMENT '服务器名',
+    `os`         varchar(32)  NULL COMMENT '操作系统',
     `ip`         varchar(15)  NULL COMMENT '服务器IP',
     `domain`     varchar(128) NULL COMMENT '域名',
     `rmk`        varchar(512) NULL COMMENT '备注',

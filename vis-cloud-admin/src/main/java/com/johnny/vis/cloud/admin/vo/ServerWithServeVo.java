@@ -45,6 +45,11 @@ public class ServerWithServeVo implements Serializable {
     private String serverName;
 
     /**
+     * 操作系统
+     */
+    private String serverOs;
+
+    /**
      * 服务器IP
      */
     private String serverIp;

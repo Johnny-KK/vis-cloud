@@ -32,6 +32,12 @@ public class ServerEntity extends BaseEntity {
     private String name;
 
     /**
+     * 操作系统
+     */
+    @TableField("os")
+    private String os;
+
+    /**
      * 服务器IP
      */
     @TableField("ip")
