@@ -9,14 +9,13 @@ import lombok.Setter;
 
 /**
  * @author Johnny
- * @date 2021-02-05
  */
-@Getter
 @Setter
-@TableName("server")
-public class ServerEntity extends BaseEntity {
+@Getter
+@TableName("serve")
+public class ServeEntity extends BaseEntity {
 
-    private static final long serialVersionUID = -3468798825328612087L;
+    private static final long serialVersionUID = 8753115384157545792L;
 
     /**
      * 主键
@@ -26,22 +25,28 @@ public class ServerEntity extends BaseEntity {
     private Long id;
 
     /**
-     * 服务器名
+     * 所属服务器ID
+     */
+    @TableField("serverId")
+    private Long serverId;
+
+    /**
+     * 服务名
      */
     @TableField("name")
     private String name;
 
     /**
-     * 服务器IP
+     * 端口号
      */
-    @TableField("ip")
-    private String ip;
+    @TableField("port")
+    private String port;
 
     /**
-     * 域名
+     * 是否为docker服务 Y/N
      */
-    @TableField("domain")
-    private String domain;
+    @TableField("isDocker")
+    private String isDocker;
 
     /**
      * 备注
