@@ -5,8 +5,9 @@
     <select id="queryServerListWithServe" resultType="java.util.Map">
         select t.id,
                t.name   serverName,
-               t.ip     serverName,
+               t.ip     serverIp,
                t.domain serverDomain,
+               r.id     serveId,
                r.name   serveName,
                r.port   servePort
         from server t

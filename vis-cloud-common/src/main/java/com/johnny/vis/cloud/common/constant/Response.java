@@ -16,6 +16,7 @@ public class Response {
     public static final String SUCCESS_SAVE = "保存成功";
     public static final String SUCCESS_QUERY = "查询成功";
     public static final String SUCCESS_EDIT = "修改成功";
+    public static final String SUCCESS_DELETE = "删除成功";
 
     public static final String ERROR_DEFAULT = "操作失败";
     public static final String ERROR_SAVE = "保存失败";

@@ -2,7 +2,7 @@ package com.johnny.vis.cloud.admin.controller;
 
 import com.johnny.vis.cloud.admin.entity.ServerEntity;
 import com.johnny.vis.cloud.admin.service.ServerService;
-import com.johnny.vis.cloud.admin.vo.ServerVo;
+import com.johnny.vis.cloud.admin.vo.ServerWithServeVo;
 import com.johnny.vis.cloud.common.constant.Response;
 import com.johnny.vis.cloud.common.entity.ResponseData;
 import io.swagger.annotations.Api;
@@ -32,6 +32,13 @@ public class ServerController {
         return ResponseData.success(Response.SUCCESS_SAVE);
     }
 
+    @ApiOperation("删除服务器")
+    @GetMapping("delServerById")
+    public ResponseData<Object> delServerById(Long id) {
+        this.serverService.removeById(id);
+        return ResponseData.success(Response.SUCCESS_DELETE);
+    }
+
     @ApiOperation("条件查询服务器信息列表")
     @GetMapping("queryServerList")
     public ResponseData<List<ServerEntity>> queryServerList(ServerEntity entity) {
@@ -40,7 +47,7 @@ public class ServerController {
 
     @ApiOperation("条件查询服务器列表以及下属服务列表")
     @GetMapping("queryServerListWithServe")
-    public ResponseData<List<ServerVo>> queryServerListWithServe() {
+    public ResponseData<List<ServerWithServeVo>> queryServerListWithServe() {
         return ResponseData.success(serverService.queryServerListWithServe());
     }
 }
