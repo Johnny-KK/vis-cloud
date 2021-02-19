@@ -21,4 +21,3 @@ RUN bash -c 'touch /app.jar'
 
 # -Djava.security.egd=file:/dev/./urandom 用来指定tomcat启动时安全随机数使用的熵池
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-
