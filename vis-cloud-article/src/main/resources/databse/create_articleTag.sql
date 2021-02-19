@@ -1,4 +1,4 @@
-CREATE TABLE `article`.`articleTag`  (
+CREATE TABLE `visArticle`.`articleTag`  (
   `id` bigint(0) NOT NULL COMMENT 'ID',
   `articleId` bigint(0) NULL COMMENT '文章ID',
   `tagId` bigint(0) NULL COMMENT '标签ID',

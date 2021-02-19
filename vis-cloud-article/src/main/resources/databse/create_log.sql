@@ -1,4 +1,4 @@
-CREATE TABLE `article`.`log`  (
+CREATE TABLE `visArticle`.`log`  (
   `id` bigint(0) NOT NULL COMMENT 'ID',
   `userCode` varchar(32) NULL COMMENT '用户编码',
   `moduleName` varchar(64) NULL COMMENT '模块名称',
