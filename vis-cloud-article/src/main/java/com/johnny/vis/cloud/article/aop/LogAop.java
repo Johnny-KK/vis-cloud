@@ -19,8 +19,8 @@ import java.util.Date;
  * @author Johnny
  * @date 2020-12-25
  */
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LogAop {
     /**
      * TODO 添加userCode

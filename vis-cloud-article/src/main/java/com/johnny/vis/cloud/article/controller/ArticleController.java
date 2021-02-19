@@ -11,7 +11,6 @@ import com.johnny.vis.cloud.article.vo.ArticleVo;
 import com.johnny.vis.cloud.common.entity.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,11 +25,14 @@ import java.util.stream.Collectors;
 @Api("文章")
 public class ArticleController implements ArticleTrans {
 
-    @Autowired
-    private ArticleService articleService;
+    private final ArticleService articleService;
 
-    @Autowired
-    private ArticleTagService articleTagService;
+    private final ArticleTagService articleTagService;
+
+    public ArticleController(ArticleService articleService, ArticleTagService articleTagService) {
+        this.articleService = articleService;
+        this.articleTagService = articleTagService;
+    }
 
     @GetMapping("getArticleList")
     @ApiOperation(value = "条件获取文章列表", notes = "条件获取文章列表 列表去除文章内容字段以减少传输体积")

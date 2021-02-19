@@ -1,4 +1,4 @@
-CREATE TABLE `article`.`tag`  (
+CREATE TABLE `visArticle`.`tag`  (
   `id` bigint(0) NOT NULL COMMENT 'ID',
   `code` varchar(64) NULL COMMENT '标签编码',
   `name` varchar(64) NULL COMMENT '标签名称',

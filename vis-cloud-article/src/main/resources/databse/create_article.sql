@@ -1,4 +1,4 @@
-CREATE TABLE `article`.`article`  (
+CREATE TABLE `visArticle`.`article`  (
   `id` bigint(0) NOT NULL COMMENT 'ID',
   `title` varchar(64) NULL COMMENT '标题',
   `author` varchar(32) NULL COMMENT '作者',
