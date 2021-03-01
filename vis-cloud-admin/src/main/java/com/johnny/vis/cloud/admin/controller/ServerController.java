@@ -47,7 +47,7 @@ public class ServerController {
 
     @ApiOperation("条件查询服务器列表以及下属服务列表")
     @GetMapping("queryServerListWithServe")
-    public ResponseData<List<ServerWithServeVo>> queryServerListWithServe() {
-        return ResponseData.success(serverService.queryServerListWithServe());
+    public ResponseData<List<ServerWithServeVo>> queryServerListWithServe(String fuzzy) {
+        return ResponseData.success(serverService.queryServerListWithServe(fuzzy));
     }
 }

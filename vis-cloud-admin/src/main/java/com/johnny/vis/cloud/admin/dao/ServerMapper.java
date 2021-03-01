@@ -17,7 +17,8 @@ public interface ServerMapper extends BaseMapper<ServerEntity> {
     /**
      * 条件查询服务器列表以及下属服务列表
      *
+     * @param fuzzy 模糊搜索
      * @return ServerVo[]
      */
-    List<Map<String, Object>> queryServerListWithServe();
+    List<Map<String, Object>> queryServerListWithServe(String fuzzy);
 }

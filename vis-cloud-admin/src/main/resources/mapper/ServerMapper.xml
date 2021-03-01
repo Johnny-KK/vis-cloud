@@ -4,16 +4,22 @@
 <mapper namespace="com.johnny.vis.cloud.admin.dao.ServerMapper">
     <select id="queryServerListWithServe" resultType="java.util.Map">
         select t.id,
-               t.name   serverName,
-               t.os     serverOs,
-               t.ip     serverIp,
-               t.domain serverDomain,
-               t.isVirtual,
-               r.id     serveId,
-               r.name   serveName,
-               r.port   servePort
+        t.name serverName,
+        t.os serverOs,
+        t.ip serverIp,
+        t.domain serverDomain,
+        t.isVirtual,
+        t.rmk serverRmk,
+        r.id serveId,
+        r.name serveName,
+        r.port servePort,
+        r.rmk serveRmk,
+        r.isDocker serveIsDocker
         from server t
-                 left join serve r on t.id = r.serverId
+        left join serve r on t.id = r.serverId
         where t.deleted = 'N'
+        <if test="fuzzy != null and fuzzy != ''">
+            AND (t.name like '%${fuzzy}%' OR r.name like '%${fuzzy}%')
+        </if>
     </select>
 </mapper>

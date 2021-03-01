@@ -65,6 +65,11 @@ public class ServerWithServeVo implements Serializable {
     private String isVirtual;
 
     /**
+     * 服务器备注
+     */
+    private String serverRmk;
+
+    /**
      * 下属服务列表
      */
     private List<ServeVo> serveList;
@@ -89,5 +94,15 @@ public class ServerWithServeVo implements Serializable {
          * 服务端口
          */
         private String servePort;
+
+        /**
+         * 服务备注
+         */
+        private String serveRmk;
+
+        /**
+         * 是否是Docker
+         */
+        private String serveIsDocker;
     }
 }

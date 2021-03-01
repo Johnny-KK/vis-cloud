@@ -31,9 +31,11 @@ public class ServerService extends ServiceImpl<ServerMapper, ServerEntity> {
 
     /**
      * 条件查询服务器列表以及下属服务列表
+     *
+     * @param fuzzy 模糊搜索
      */
-    public List<ServerWithServeVo> queryServerListWithServe() {
-        List<Map<String, Object>> maps = this.baseMapper.queryServerListWithServe();
+    public List<ServerWithServeVo> queryServerListWithServe(String fuzzy) {
+        List<Map<String, Object>> maps = this.baseMapper.queryServerListWithServe(fuzzy);
         List<ServerWithServeVo> result = new ArrayList<>();
         if (maps.isEmpty()) {
             return result;
