@@ -5,7 +5,7 @@
     <description>article server</description>
     <artifactId>vis-cloud-admin</artifactId>
     <name>vis-cloud-admin</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <parent>
         <artifactId>vis-cloud</artifactId>
