@@ -14,4 +14,4 @@ docker login --username=${docker_user} --password=${docker_pwd} ${docker_domain}
 
 docker image ls
 
-docker push ${docker_domain}/${docker_project}/vis-cloud-admin:0.0.1
+docker push ${docker_domain}/${docker_project}/vis-cloud-admin:0.0.2
